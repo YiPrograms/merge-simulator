@@ -71,6 +71,10 @@ HTMLActuator.prototype.addTile = function (tile) {
     img.src = "./meta/" + tile.value + ".jpg";
     img.style.height="100%";
     img.style.width="100%";
+    img.style.marginTop="15px";
+    img.style.marginLeft="15px";
+    img.style.marginRight="15px";
+    img.style.marginBottom="15px";
     inner.appendChild(img);
   }
   else
