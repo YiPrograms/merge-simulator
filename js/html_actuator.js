@@ -67,7 +67,7 @@ HTMLActuator.prototype.addTile = function (tile) {
 
 
   inner.classList.add("tile-inner");
-  if (tile.value <= 1024) {
+  if (tile.value <= 2048) {
     img.src = "./meta/" + tile.value + ".jpg";
     img.style.height="95%";
     img.style.width="95%";
@@ -76,7 +76,7 @@ HTMLActuator.prototype.addTile = function (tile) {
     inner.appendChild(img);
   }
   else
-    inner.textContent = "OMG 冠廷被感謝到爆炸了";
+    inner.textContent = "OMG 冠廷被感謝到炸了";
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
@@ -134,7 +134,7 @@ HTMLActuator.prototype.updateScore = function (score) {
   var difference = score - this.score;
   this.score = score;
 
-  this.scoreContainer.textContent = this.score >= 1000 ? "1000+ " : this.score;
+  this.scoreContainer.textContent = this.score;
 
   if (difference > 0) {
     var addition = document.createElement("div");
