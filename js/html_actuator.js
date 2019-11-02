@@ -67,7 +67,7 @@ HTMLActuator.prototype.addTile = function (tile) {
 
 
   inner.classList.add("tile-inner");
-  if (tile.value <= 2048) {
+  if (tile.value <= 1024) {
     img.src = "./meta/" + tile.value + ".jpg";
     img.style.height="100%";
     img.style.width="100%";
@@ -149,7 +149,7 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var type = won ? "game-won" : "game-over";
-  var message = won ? "乂國立開山科大乂" : "垃圾學店下去888";
+  var message = won ? "感謝冠廷 m(__)m" : "感謝冠廷 m(__)m";
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
