@@ -69,12 +69,10 @@ HTMLActuator.prototype.addTile = function (tile) {
   inner.classList.add("tile-inner");
   if (tile.value <= 1024) {
     img.src = "./meta/" + tile.value + ".jpg";
-    img.style.height="100%";
-    img.style.width="100%";
-    img.style.marginTop="15px";
-    img.style.marginLeft="15px";
-    img.style.marginRight="15px";
-    img.style.marginBottom="15px";
+    img.style.height="95%";
+    img.style.width="95%";
+    img.style.padding="2.5%";
+    img.style.borderRadius="5px";
     inner.appendChild(img);
   }
   else
@@ -133,10 +131,10 @@ HTMLActuator.prototype.score2rank = function (score) {
 HTMLActuator.prototype.updateScore = function (score) {
   this.clearContainer(this.scoreContainer);
 
-  var difference = this.score2rank(this.score) - this.score2rank(score);
+  var difference = this.score - score;
   this.score = score;
 
-  this.scoreContainer.textContent = this.score2rank(this.score) >= 1000 ? "1000+ 名" : this.score2rank(this.score) + "名";
+  this.scoreContainer.textContent = this.score >= 1000 ? "1000+ " : this.score;
 
   if (difference > 0) {
     var addition = document.createElement("div");
