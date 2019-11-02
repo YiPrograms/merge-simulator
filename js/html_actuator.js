@@ -51,6 +51,7 @@ HTMLActuator.prototype.addTile = function (tile) {
 
   var wrapper = document.createElement("div");
   var inner = document.createElement("div");
+  var img = document.createElement("img");
   var position = tile.previousPosition || {
     x: tile.x,
     y: tile.y
@@ -64,25 +65,14 @@ HTMLActuator.prototype.addTile = function (tile) {
 
   this.applyClasses(wrapper, classes);
 
-  const mapping = {
-    2: "南台科大",
-    4: "中台科大",
-    8: "台北城市科大",
-    16: "台灣大學",
-    32: "台灣首府大學",
-    64: "亞洲大學",
-    128: "屏科",
-    256: "虎科",
-    512: "雲科",
-    1024: "台科",
-    2048: "開山科大"
-  }
 
   inner.classList.add("tile-inner");
-  if (tile.value <= 2048)
-    inner.textContent = mapping[tile.value];
+  if (tile.value <= 2048) {
+    img.src = "./meta/" + tile.value + ".jpg";
+    inner.appendChild(img);
+  }
   else
-    inner.textContent = "開山科大 lv." + (Math.log2(tile.value) - 10);
+    inner.textContent = "OMG 冠廷被感謝到爆炸了";
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
