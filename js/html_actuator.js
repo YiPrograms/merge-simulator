@@ -69,8 +69,8 @@ HTMLActuator.prototype.addTile = function (tile) {
   inner.classList.add("tile-inner");
   if (tile.value <= 2048) {
     img.src = "./meta/" + tile.value + ".jpg";
-    img.width="100%";
-    img.height="100%";
+    img.style.height="100%";
+    img.style.width="100%";
     inner.appendChild(img);
   }
   else
