@@ -1,10 +1,9 @@
-# 併校模擬器 | Merge Simulator
+# 謝謝冠廷 | Thanks, Timmy!
 
-https://splitline.github.io/merge-simulator/
+https://thx-timmy.ml
 
 ## How To Play
-併校刷國際排名！
+大家一起來謝謝冠廷！
 
-不用當校長也能體驗到併校的快感。併得越多排名便會越高，試著刷到世界第一吧🐱
-
-> Fork From https://github.com/gabrielecirulli/2048/
+> Original https://github.com/gabrielecirulli/2048/
+> Forked From https://github.com/splitline/merge-simulator/
