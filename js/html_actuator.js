@@ -131,15 +131,15 @@ HTMLActuator.prototype.score2rank = function (score) {
 HTMLActuator.prototype.updateScore = function (score) {
   this.clearContainer(this.scoreContainer);
 
-  var difference = this.score - score;
+  var difference = score - this.score;
   this.score = score;
 
   this.scoreContainer.textContent = this.score;
 
-  if (Math.abs(difference)>0) {
+  if (difference>0) {
     var addition = document.createElement("div");
     addition.classList.add("score-addition");
-    addition.textContent = "⬆" + Math.abs(difference);
+    addition.textContent = "+" + Math.abs(difference);
 
     this.scoreContainer.appendChild(addition);
   }
