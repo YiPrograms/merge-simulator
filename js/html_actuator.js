@@ -139,7 +139,7 @@ HTMLActuator.prototype.updateScore = function (score) {
   if (true) {
     var addition = document.createElement("div");
     addition.classList.add("score-addition");
-    addition.textContent = "⬆" + abs(difference);
+    addition.textContent = "⬆" + Math.abs(difference);
 
     this.scoreContainer.appendChild(addition);
   }
